@@ -18,7 +18,7 @@ const MoviesList: FC<IProps> = () => {
 
     return (
         <div>
-
+            {movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
         </div>
     );
 };

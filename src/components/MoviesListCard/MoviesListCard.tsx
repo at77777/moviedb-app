@@ -4,11 +4,13 @@ import {IMovie} from "../../interfaces/movieInterface";
 interface IProps extends PropsWithChildren {
     movie: IMovie
 }
-const MoviesListCard: FC = () => {
+const MoviesListCard: FC<IProps> = ({movie}) => {
+    const {title, release_date} = movie;
 
     return (
         <div>
-
+            <div>{title}</div>
+            <div>{release_date}</div>
         </div>
     );
 };
