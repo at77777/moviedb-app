@@ -1,9 +1,11 @@
-import React, {FC} from 'react';
+import React, {FC, PropsWithChildren} from 'react';
+import {IMovie} from "../../interfaces/movieInterface";
 
-interface IProps {
-
+interface IProps extends PropsWithChildren {
+    movie: IMovie
 }
 const MoviesListCard: FC = () => {
+
     return (
         <div>
 

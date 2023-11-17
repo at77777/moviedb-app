@@ -1,10 +1,21 @@
-import React, {FC} from 'react';
+import React, {FC, PropsWithChildren, useEffect} from 'react';
+import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks";
+import {movieActions} from "../../redux/slices/movieSlice";
+import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 
-interface IProps {
-
+interface IProps extends PropsWithChildren {
 }
 
-const MoviesList: FC = () => {
+const MoviesList: FC<IProps> = () => {
+    const dispatch = useAppDispatch();
+    const {movies} = useAppSelector(state => state.movies);
+
+    useEffect(() => {
+        dispatch(movieActions.getALL())
+        }, [])
+
+    console.log(movies)
+
     return (
         <div>
 
