@@ -1,12 +1,14 @@
-import React from 'react';
-import {Outlet} from "react-router-dom";
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { Header } from "../components/Header/Header";
 
 const MoviesPage = () => {
-    return (
-        <div>
-            <Outlet/>
-        </div>
-    );
+  return (
+    <div>
+      <Header />
+      <Outlet />
+    </div>
+  );
 };
 
-export {MoviesPage};
+export { MoviesPage };

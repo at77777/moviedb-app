@@ -1,14 +1,13 @@
-const baseURL = 'https://api.themoviedb.org/3/';
+const baseURL = "https://api.themoviedb.org/3/";
 
-const movies = '/discover/movie';
+const movies = "/discover/movie";
+const genres = "/genre/movie/list";
 
 const urls = {
-    movies:{
-        base: movies
-    }
+  movies: {
+    base: movies,
+  },
+  genres,
 };
 
-export {
-    baseURL,
-    urls
-}
+export { baseURL, urls };

@@ -1,14 +1,8 @@
-import React, {FC} from 'react';
+import React, { FC } from "react";
 
-interface IProps {
-
-}
+interface IProps {}
 const MovieInfo: FC = () => {
-    return (
-        <div>
-
-        </div>
-    );
+  return <div></div>;
 };
 
-export {MovieInfo};
+export { MovieInfo };

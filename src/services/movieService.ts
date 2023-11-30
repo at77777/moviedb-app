@@ -1,11 +1,13 @@
-import {IRes} from "../types/IResType";
-import {IMovie} from "../interfaces/movieInterface";
-import {axiosService} from "./axiosService";
-import {urls} from "../constants/urls";
-import {IPagination} from "../interfaces/paginationInterface";
+import { IRes } from "../types/resType";
+import { IMovie } from "../interfaces/movieInterface";
+import { apiService } from "./apiService";
+import { urls } from "../constants/urls";
+import { IPagination } from "../interfaces/paginationInterface";
+import { IGenre } from "../interfaces/genresInterface";
 
 const movieService = {
-    getAll: (): IRes<IPagination<IMovie>> => axiosService.get(urls.movies.base)
+  getMovies: (): IRes<IPagination<IMovie>> => apiService.get(urls.movies.base),
+  getGenres: (): IRes<IGenre> => apiService.get(urls.genres),
 };
 
-export {movieService};
+export { movieService };

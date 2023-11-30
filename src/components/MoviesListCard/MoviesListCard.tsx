@@ -1,18 +1,19 @@
-import React, {FC, PropsWithChildren} from 'react';
-import {IMovie} from "../../interfaces/movieInterface";
+import React, { FC, PropsWithChildren } from "react";
+import { Link } from "react-router-dom";
+import { IMovie } from "../../interfaces/movieInterface";
 
 interface IProps extends PropsWithChildren {
-    movie: IMovie
+  movie: IMovie;
 }
-const MoviesListCard: FC<IProps> = ({movie}) => {
-    const {title, release_date} = movie;
+const MoviesListCard: FC<IProps> = ({ movie }) => {
+  const { id, title, release_date } = movie;
 
-    return (
-        <div>
-            <div>{title}</div>
-            <div>{release_date}</div>
-        </div>
-    );
+  return (
+    <div>
+      <Link to={id.toString()}>{title}</Link>
+      <div>{release_date}</div>
+    </div>
+  );
 };
 
-export {MoviesListCard};
+export { MoviesListCard };
